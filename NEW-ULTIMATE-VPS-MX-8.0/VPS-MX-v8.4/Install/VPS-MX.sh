@@ -346,7 +346,7 @@ NOTIFY () {
 clear
 clear
 msg -bar
-msg -ama "     [ VPS - MX - SCRIPT \033[1;97m ❌ MOD By @Kalix1 ❌\033[1;33m ]"
+msg -ama "     [ VPS - MX - SCRIPT \033[1;97m ❌ MOD By @flechaverde ❌\033[1;33m ]"
 msg -bar
 msg -ama " Notify-BOT (Notificasion Remota)| VPS-MX By @Kalix1 "
 msg -bar
@@ -389,7 +389,7 @@ chmod +x /bin/monitor.sh
 wget -O /var/www/html/estilos.css https://raw.githubusercontent.com/flecha1/PROYECTOS_DESCONTINUADOS/master/NEW-ULTIMATE-VPS-MX-8.0/VPS-MX-v8.4/Install/Monitor-Service/estilos.css &> /dev/null
 msg -bar2
 msg -bar2
-msg -ama "     [ VPS - MX - SCRIPT \033[1;97m ❌ MOD By @Kalix1 ❌\033[1;33m ]"
+msg -ama "     [ VPS - MX - SCRIPT \033[1;97m ❌ MOD By @flechaverde ❌\033[1;33m ]"
 msg -ama "  \033[1;96m      🔰Usar Ubuntu 20 a 64 De Preferencia🔰 "
 msg -bar2
 [[ $1 = "" ]] && funcao_idioma || {
