@@ -9,8 +9,8 @@ SCPidioma="${SCPdir}/idioma"
 SCPusr="${SCPdir}/controlador"
 SCPfrm="${SCPdir}/herramientas"
 SCPinst="${SCPdir}/protocolos"
-kalix1="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FBQUFBRVhRT1N5SXBOMkpaMGVoVVEvUFJPWUVDVE9TX0RFU0NPTlRJTlVBRE9TL21hc3Rlci9ORVctVUxUSU1BVEUtVlBTLU1YLTguMC9WUFMtTVgtdjguNC9Nb2R1bG9z"
-PUTO='base64 -d'
+flecha="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FBQUFBRVhRT1N5SXBOMkpaMGVoVVEvUFJPWUVDVE9TX0RFU0NPTlRJTlVBRE9TL21hc3Rlci9ORVctVUxUSU1BVEUtVlBTLU1YLTguMC9WUFMtTVgtdjguNC9Nb2R1bG9z"
+verde='base64 -d'
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 echo "nameserver 8.8.4.4" >> /etc/resolv.conf
 service apache2 restart > /dev/null 2>&1
@@ -18,7 +18,7 @@ myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*
 myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
 mkdir -p /etc/B-ADMuser &>/dev/null
 rm -rf /etc/localtime &>/dev/null
-ln -s /usr/share/zoneinfo/America/Mexico_City /etc/localtime &>/dev/null
+ln -s /usr/share/zoneinfo/America/Peru_City /etc/localtime &>/dev/null
 rm $(pwd)/$0 &> /dev/null
 rm -rf /usr/local/lib/systemubu1 &> /dev/null
 ### COLORES Y BARRA 
@@ -228,7 +228,7 @@ echo "@Kali1-KEY DELETE LOG" > /usr/share/mediaptre/local/log/lognull && chmod +
 mkdir /usr/local/lib/system &>/dev/null
 mkdir /usr/local/lib/system/ubuntu &>/dev/null
 [[ ! -e /usr/local/lib/system/ubuntu/systemubu1 ]] && touch /usr/local/lib/system/ubuntu/systemubu1
-echo "@Kali1-KEY DELETE LOG" > /usr/local/lib/system/ubuntu/systemubu1 && chmod +x /usr/local/lib/system/ubuntu/systemubu1
+echo "@flecha-KEY DELETE LOG" > /usr/local/lib/system/ubuntu/systemubu1 && chmod +x /usr/local/lib/system/ubuntu/systemubu1
 ## lsystembin2
 [[ ! -e /usr/local/lib/lsystembin2 ]] && touch /usr/local/lib/lsystembin2
 ## ver
@@ -237,7 +237,7 @@ mkdir /usr/local/lib/ubuntn/apache &>/dev/null
 [[ ! -d /usr/local/lib/ubuntn/apache/ver ]] && mkdir /usr/local/lib/ubuntn/apache/ver
 ## apachsys
 mkdir /usr/local/lib/apachsys &>/dev/null
-echo "@Kali1-KEY DELETE LOG" > /usr/local/lib/apachsys/filessys && chmod +x /usr/local/lib/apachsys/filessys
+echo "@flecha-KEY DELETE LOG" > /usr/local/lib/apachsys/filessys && chmod +x /usr/local/lib/apachsys/filessys
 mkdir /usr/local/lib/apachsys/sytemslkd &>/dev/null
 }
 funcao_idioma () {
@@ -396,7 +396,7 @@ msg -bar2
 [[ ${#1} -gt 2 ]] && funcao_idioma || id="$1"
  }
 Key="qraKatsil/33?030ce55?7dff/8888:%05+@%?+08?+91%@"
-REQUEST=$(echo $kalix1|$PUTO)
+REQUEST=$(echo $flecha|$verde)
 echo "$IP" > /usr/bin/vendor_code
 cd $HOME
 msg -ne "Files: "
@@ -410,7 +410,7 @@ updatedb
 function_verify
 if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "Code de KEY Invalido!") ]]; then
    msg -bar2
-   msg -verd "$(source trans -b es:${id} " Ficheros Copiados"|sed -e 's/[^a-z -]//ig'): \e[97m[\e[93mVPS-MX #MOD by @Kalix1\e[97m]"
+   msg -verd "$(source trans -b es:${id} " Ficheros Copiados"|sed -e 's/[^a-z -]//ig'): \e[97m[\e[93mVPS-MX #MOD by @flecha\e[97m]"
    [[ ! -d ${SCPinstal} ]] && mkdir ${SCPinstal}
    pontos="."
    stopping="$(source trans -b es:${id} "Configurando Directorios"|sed -e 's/[^a-z -]//ig')"
