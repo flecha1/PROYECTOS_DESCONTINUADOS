@@ -131,7 +131,7 @@ function_verify () {
   permited=$(curl -sSL "https://www.dropbox.com/s/bg8bpaefxq9s5jl/Control-IP")
   [[ $(echo $permited|grep "${IP}") = "" ]] && {
   clear
-  echo -e "\n\n\n\033[1;91m————————————————————————————————————————————————————\n      ¡ESTA KEY NO CONCUERDA CON EL INSTALADOR! \n                 CONATACTE A @Kalix1\n————————————————————————————————————————————————————\n\n\n"
+  echo -e "\n\n\n\033[1;91m————————————————————————————————————————————————————\n      ¡ESTA KEY NO CONCUERDA CON EL INSTALADOR! \n                 CONATACTE A @FlechaVerde_inc\n————————————————————————————————————————————————————\n\n\n"
   [[ -d /etc/VPS-MX ]] && rm -rf /etc/VPS-MX
   exit 1
   } || {
@@ -145,7 +145,7 @@ fun_ip
 SCPinstal="$HOME/install"
 verificar_arq () {
 case $1 in
-"menu"|"message.txt"|"menu.enc")ARQ="${SCPdir}/";; #Menu
+"menu"|"message1.txt"|"menu.enc")ARQ="${SCPdir}/";; #Menu
 "usercodes")ARQ="${SCPusr}/";; #Panel SSRR
 "C-SSR.sh")ARQ="${SCPinst}/";; #Panel SSR
 "openssh.sh")ARQ="${SCPinst}/";; #OpenVPN
@@ -198,7 +198,7 @@ updatedb
 
 if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "Code de KEY Invalido!") ]]; then
    msg -bar2
-   msg -verd "    $(source trans -b es:es "Ficheros Copiados"|sed -e 's/[^a-z -]//ig'): \e[97m[\e[93mVPS-MX #MOD by @Kalix1\e[97m]"
+   msg -verd "    $(source trans -b es:es "Ficheros Copiados"|sed -e 's/[^a-z -]//ig'): \e[97m[\e[93mVPS-MX #MOD by @FlechaVerde_inc\e[97m]"
    REQUEST=$(ofus "$Key"|cut -d'/' -f2)
    [[ ! -d ${SCPinstal} ]] && mkdir ${SCPinstal}
    pontos="." 
@@ -756,7 +756,7 @@ msg -bar
 msg -tit
 # echo -e "\033[1;31m[\033[1;32m $vesaoSCT\033[1;97m"
 # msg -bar
-title=`echo -e "\033[1;96m$(cat ${SCPdir}/message.txt)"`
+title=`echo -e "\033[1;96m$(cat ${SCPdir}/message1.txt)"`
 printf "%*s\n" $(( ( $(echo -e "$title" | wc -c ) + 55 ) / 2 )) "$title"
 msg -bar
 echo -e "     \033[1;37mIP: \033[1;93m$(meu_ip)     \033[1;37mS.O: \033[1;96m$(os_system)"
@@ -922,7 +922,7 @@ msg -bar
 msg -tit
 echo -ne " \033[1;93m          CREDITOS Y REGISTRO DE CAMBIOS\n"
 msg -bar
-[[ -e ${SCPdir}/message.txt ]] && msg -bra " RESELLER AUTORIZADO: \n\033[1;96m $(cat ${SCPdir}/message.txt) "
+[[ -e ${SCPdir}/message1.txt ]] && msg -bra " RESELLER AUTORIZADO: \n\033[1;96m $(cat ${SCPdir}/message1.txt) "
 [[ -e ${SCPdir}/key.txt ]] && msg -bra " KEY DE REGISTRO:\n \033[1;93m $(cat ${SCPdir}/key.txt)"
 msg -bar
 echo -ne "\033[1;97m        CAMBIOS DE LA VERSION 8.3\n"
