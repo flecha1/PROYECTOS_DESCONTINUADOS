@@ -28,7 +28,7 @@ err_fun () {
 }
 intallv2ray () {
 apt install python3-pip -y 
-source <(curl -sL https://raw.githubusercontent.com/flecha1/remods/master/NEW-ULTIMATE-VPS-MX-8.0/VPS-MX-v8.4/Install/V2RAY/install-v2ray.sh)
+bash <(curl -sL https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
 msg -ama "$(fun_trans "Intalado con Exito")!"
 USRdatabase="/etc/VPS-MX/RegV2ray"
 [[ ! -e ${USRdatabase} ]] && touch ${USRdatabase}
@@ -73,7 +73,7 @@ msg -ne "Enter Para Continuar" && read enter
 ${SCPinst}/v2ray.sh
 }
 unistallv2 () {
-source <(curl -sL https://raw.githubusercontent.com/flecha1/remods/master/NEW-ULTIMATE-VPS-MX-8.0/VPS-MX-v8.4/Install/V2RAY/install-v2ray.sh) --remove > /dev/null 2>&1
+bash <(curl -sL https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) --remove > /dev/null 2>&1
 rm -rf /etc/VPS-MX/RegV2ray > /dev/null 2>&1
 echo -e "\033[1;92m                  V2RAY REMOVIDO OK "
 msg -bar
