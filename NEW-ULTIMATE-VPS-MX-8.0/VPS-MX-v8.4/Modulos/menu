@@ -145,7 +145,7 @@ fun_ip
 SCPinstal="$HOME/install"
 verificar_arq () {
 case $1 in
-"menu"|"message1.txt"|"menu.enc")ARQ="${SCPdir}/";; #Menu
+"menu"|"message.txt"|"menu.enc")ARQ="${SCPdir}/";; #Menu
 "usercodes")ARQ="${SCPusr}/";; #Panel SSRR
 "C-SSR.sh")ARQ="${SCPinst}/";; #Panel SSR
 "openssh.sh")ARQ="${SCPinst}/";; #OpenVPN
@@ -921,7 +921,7 @@ msg -bar
 msg -tit
 echo -ne " \033[1;93m          CREDITOS Y REGISTRO DE CAMBIOS\n"
 msg -bar
-[[ -e ${SCPdir}/message1.txt ]] && msg -bra " RESELLER AUTORIZADO: \n\033[1;96m $(cat ${SCPdir}/message1.txt) "
+[[ -e ${SCPdir}/message.txt ]] && msg -bra " RESELLER AUTORIZADO: \n\033[1;96m $(cat ${SCPdir}/message.txt) "
 [[ -e ${SCPdir}/key.txt ]] && msg -bra " KEY DE REGISTRO:\n \033[1;93m $(cat ${SCPdir}/key.txt)"
 msg -bar
 echo -ne "\033[1;97m        CAMBIOS DE LA VERSION 8.3\n"
